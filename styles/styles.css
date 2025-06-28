@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px lightgray;
+  overflow: hidden;
+  max-width: 700px;
+  width: 100%;
+}
+
+/* Result Section (Left Panel) */
+.result-section {
+  background: linear-gradient(to bottom, blueviolet, indigo);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  flex: 1;
+  border-radius: 20px 0 0 20px;
+}
+
+.result-section h3 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.score-circle {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-circle h1 {
+  font-size: 3rem;
+}
+
+.result-section h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  opacity: 0.85;
+}
+
+/* Summary Section (Right Panel) */
+.summary-section {
+  flex: 1;
+  padding: 2rem;
+  background-color: white;
+}
+
+.summary-section h3 {
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.summary-item {
+  background-color: lavender;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+/* Category Colors using named colors */
+.reaction {
+  color: crimson;
+  background-color: mistyrose;
+}
+
+.memory {
+  color: goldenrod;
+  background-color: cornsilk;
+}
+
+.verbal {
+  color: seagreen;
+  background-color: honeydew;
+}
+
+.visual {
+  color: slateblue;
+  background-color: lavender;
+}
+
+/* Button */
+.continue-btn {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(to right, blue, mediumslateblue);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.continue-btn:hover {
+  background: linear-gradient(to right, mediumslateblue, blue);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  .result-section {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .summary-section {
+    border-radius: 0 0 20px 20px;
+  }
+}
